@@ -1,15 +1,30 @@
-const Sequelize = require('sequelize');
+// const Sequelize = require('sequelize');
+
+// const Sequelize = require('sequelize');
+// module.exports = new Sequelize('usuarios', 'postgres', 'admin', {
+//     host: 'localhost',
+//     dialect: 'postgres',
+//     pool: {
+//         max: 5,
+//         min: 0,
+//         idle: 10000
+//     }
+// });
+
+
 
 const Sequelize = require('sequelize');
-module.exports = new Sequelize('usuarios', 'postgres', 'admin', {
-    host: 'localhost',
-    dialect: 'postgres',
+module.exports = new Sequelize('usuarios_db', 'adminusuario', 'U(Sx9Vh9}Szd', {
+    host: 'mysql743.umbler.com',
+    port: 41890,
+    dialect: 'mysql',
     pool: {
         max: 5,
         min: 0,
         idle: 10000
     }
 });
+
 
 // let match = process.env.DATABASE_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/)
 // module.exports = new Sequelize(match[5], match[1], match[2], {

@@ -20,6 +20,7 @@
         "mongoose": "^4.4.12",
         "morgan": "~1.6.1",
         "pg": "7.4.0",
+        "mysql2": "^2.1.0",
         "request": "^2.72.0",
         "sequelize": "4.22.15",
         "serve-favicon": "~2.3.0",
