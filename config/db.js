@@ -1,39 +1,10 @@
-// const Sequelize = require('sequelize');
+//require('dotenv-safe').config();
 
-// const Sequelize = require('sequelize');
-// module.exports = new Sequelize('usuarios', 'postgres', 'admin', {
-//     host: 'localhost',
-//     dialect: 'postgres',
-//     pool: {
-//         max: 5,
-//         min: 0,
-//         idle: 10000
-//     }
-// });
-
-
-
-const Sequelize = require('sequelize');
-module.exports = new Sequelize('usuarios_db', 'adminusuario', 'U(Sx9Vh9}Szd', {
-    host: 'mysql743.umbler.com',
-    port: 41890,
-    dialect: 'mysql',
-    pool: {
-        max: 5,
-        min: 0,
-        idle: 10000
-    }
-});
-
-
-// let match = process.env.DATABASE_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/)
-// module.exports = new Sequelize(match[5], match[1], match[2], {
-//     dialect: 'postgres',
-//     protocol: 'postgres',
-//     port: match[4],
-//     host: match[3],
-//     logging: false,
-//     dialectOptions: {
-//         ssl: true
-//     }
-// });
+module.exports = {
+    username: process.env.DB_USER || process.env.DBUSERNAME,
+    password: process.env.DB_PASSWORD || process.env.DBPASSWORD,
+    database: process.env.DB_NAME || process.env.DBDATABASE,
+    host: process.env.DB_HOST || process.env.DBHOST,
+    dialect: process.env.DBDIALECT || 'mysql',
+    port: process.env.DB_PORT || process.env.DBPORT
+}
