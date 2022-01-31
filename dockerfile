@@ -14,6 +14,8 @@ RUN npm install
 
 COPY . .
 
+RUN chmod +x wait-for-it.sh
+
 COPY --chown=node:node . .
 
 USER node
