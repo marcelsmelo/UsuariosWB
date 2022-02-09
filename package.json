@@ -6,7 +6,7 @@
         "babel": true
     },
     "scripts": {
-        "start": "nodemon -L ./bin/www",
+        "start": "node ./database/syncDB.js && nodemon -L ./bin/www",
         "test": "mocha tests --recursive --watch"
     },
     "dependencies": {
