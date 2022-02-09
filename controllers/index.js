@@ -12,7 +12,7 @@ module.exports = {
 
     },
     getUsuarioByID: (req, res, next) => {
-        Usuario.findById(req.params.id).then(usuario => {
+        Usuario.findByPk(req.params.id).then(usuario => {
             res.status(200).json(usuario);
         }).catch(error => {
             res.status(500).json({msg: "Erro ao buscar usuário", error: error});
