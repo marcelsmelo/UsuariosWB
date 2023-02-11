@@ -27,7 +27,7 @@
         "winston": "^2.2.0"
     },
     "devDependencies": {
-        "nodemon": "2.0.15",
+        "nodemon": "2.0.20",
         "babel-core": "6.26.0",
         "chai": "4.1.2",
         "mocha": "4.0.1",
